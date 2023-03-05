@@ -17,31 +17,31 @@ window.onload = () => {
 // - которому был совершен клик.
 // - Необходимо использовать делегирование.
 
-// const tagBody = document.querySelector('body');
-// const searchTag = (events) => {
-//     let clickTag = events.target;
-//     (clickTag.className == 'super_element') ? console.log('Класс super_element имеется в теге') : console.log('Класс super_element в теге отсутствует');
-//     console.log(`Название тега - ${clickTag.tagName.toLowerCase()}`)
-// }
-// tagBody.addEventListener('click', searchTag);
+const tagBody = document.querySelector('body');
+const searchTag = (events) => {
+    let clickTag = events.target;
+    (clickTag.className == 'super_element') ? console.log('Класс super_element имеется в теге') : console.log('Класс super_element в теге отсутствует');
+    console.log(`Название тега - ${clickTag.tagName.toLowerCase()}`)
+}
+tagBody.addEventListener('click', searchTag);
 
 // 4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение: "Вы навели на textarea."
 
-// const searchTextarea = document.querySelector('textarea');
-// // searchTextarea.addEventListener('mouseover', console.log('Вы навели на textarea.'));
-// const displayingMessageMouseOver = () => {
-//     console.log('Вы навели на textarea.');
-// }
-// searchTextarea.addEventListener('mouseover', displayingMessageMouseOver);
+const searchTextarea = document.querySelector('textarea');
+// searchTextarea.addEventListener('mouseover', console.log('Вы навели на textarea.'));
+const displayingMessageMouseOver = () => {
+    console.log('Вы навели на textarea.');
+}
+searchTextarea.addEventListener('mouseover', displayingMessageMouseOver);
 
 // 5. Необходимо повесить событие клика на тег ul. В обработчике события в консоль необходимо выводить текст, который записан внутри элемента кнопки, по которой был произведен клик. Если клик был не по кнопке, то ничего выводить не нужно. Необходимо использовать делегирование.
 
-// const searchTagUl = document.querySelector('ul');
-// const displayingMessage = (e) => {
-//     let tagClick = e.target;
-//     console.log(`Текст внутри элемента: ${tagClick.innerText}`);
-// }
-// searchTagUl.addEventListener('click', displayingMessage);
+const searchTagUl = document.querySelector('ul');
+const displayingMessage = (e) => {
+    let tagClick = e.target;
+    console.log(`Текст внутри элемента: ${tagClick.innerText}`);
+}
+searchTagUl.addEventListener('click', displayingMessage);
 
 // 6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только потом выводится текст из 3 задания, если мы кликаем по кнопкам в ul? Ответ необходимо написать здесь же, под этим комментарием, своими словами.
 // ОТВЕТ:
